@@ -12,6 +12,15 @@ int main(int argc, char const *argv[])
     {
         int digit = n % 10;
 
+        /* NOTE
+
+        In case we are finding the
+
+        1. BIT---> (Right Shift >>)    --> multilpy
+        2. MODULUS ---> (Left Shit <<) --> divide
+
+        */
+
         /*
          n = 1 1 0
 
@@ -22,9 +31,14 @@ int main(int argc, char const *argv[])
 
         digit = 11 % 10 = 1
 
-        ans =
+        ans = 0 + 2^1 = 2
+        ........................
 
+        now 11 / 10 = 1
 
+        digit = 1
+
+        ans = 2 + 2^2 = 6  (answer)
 
         */
 
