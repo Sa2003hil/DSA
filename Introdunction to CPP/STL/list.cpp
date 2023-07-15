@@ -17,7 +17,14 @@ int main(int argc, char const *argv[])
     }
     cout << endl;
 
-    // how to initiallise elements in
+    // how to initiallise elements in lists
 
-    return 0;
+    list<int> n(5, 100);
+
+    for (int i : n)
+    {
+        cout << i << " ";
+    }
+
+       return 0;
 }
