@@ -1,0 +1,1 @@
+//  Data insertion in an unordered_map is done using a hash function. The hash function generates a unique hash value for the key in the key-value pair, and this key-value pair is inserted in the unordered_map at the index same as the hash value.
