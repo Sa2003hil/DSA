@@ -49,6 +49,8 @@ int main(int argc, char const *argv[])
     char name[20];
     cin >> name;
 
+    cout << tolowercase(name) << endl;
+
     int leng = getlength(name);
 
     cout << checkpallindrome(name, leng) << endl;
