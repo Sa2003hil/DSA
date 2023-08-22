@@ -5,7 +5,7 @@ Operations of iterators :-
 
 1. begin() :- represents beginning position of the container.
 
-2. end() :-  represents  after end position of the container.
+2. end() :-  represents  after end position of the container. means the position after the end 
 
 */
 

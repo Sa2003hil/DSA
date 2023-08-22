@@ -22,7 +22,7 @@ int main(void)
 
     // Function call
     int result = search(arr, N, x);
-    (result == -1)
+    if (result == -1)
         ? cout << "Element is not present in array" // Ternary Operators
         : cout << "Element is present at index " << result;
     return 0;
