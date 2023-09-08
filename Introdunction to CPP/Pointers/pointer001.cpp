@@ -27,6 +27,6 @@ int main(int argc, char const *argv[])
     int i = 6;
     int *p = 0;
     p = &i;
-    cout << p << endl;
+    cout << "value is: " << *p << endl;
     return 0;
 }

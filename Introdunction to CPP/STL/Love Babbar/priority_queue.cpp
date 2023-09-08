@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-
+    // A Heap is a special Tree-based data structure in which the tree is a complete binary tree.
     // max-heap :-  max element show first
     priority_queue<int> maxi;
 

@@ -4,6 +4,7 @@ Each element has a key value and a mapped value. No two mapped values can have t
 
 Maps are in sorted order and they are in non-contigous manner so that's why we can't do it+1 we have to do it++ .... internal implementation of maps is done using Red Black Trees
 
+but it's implemented using a  balanced binary search tree.
 
 
 Time Complexity :- TC of adding value in the map is O(log(n))---> where n is

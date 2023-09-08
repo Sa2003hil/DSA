@@ -9,8 +9,6 @@ Time comlexity
 2.unordered_map ->
  unordered_map in C++ and HashMap in Java, both take O(1) time complexity to perform storing(i.e. insertion) and fetching(i.e. retrieval). Now, it is valid for the best case and the average case.
 
-
-
 */
 
 #include <bits/stdc++.h>
@@ -24,24 +22,23 @@ int main(int argc, char const *argv[])
     int arr[n];
 
     /*
-    
-    This is the case of ordered map in which elements are stored in the sorted order , if we take   unordered_map<int, int> mpp;  all the this code runs same but the thing changed is order is unsorted  
+
+    This is the case of ordered map in which elements are stored in the sorted order , if we take   unordered_map<int, int> mpp;  all the this code runs same but the thing changed is order is unsorted
 
     example :
     5
     1 1 2 1 2
-    
+
     2->2
     1->3
 
 
-    ** IMPORTANT **  Note: 
-    
+    ** IMPORTANT **  Note:
+
     Our first priority will be always to use unordered_map and then map. If unordered_map gives a time limit exceeded error(TLE), we will then use the map.
 
-    
-    
-    */ 
+
+    */
 
     unordered_map<int, int> mpp;
     for (int i = 0; i < n; i++)
