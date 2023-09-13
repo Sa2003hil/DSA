@@ -9,6 +9,7 @@ void push(int data)
     if (top == MAX_SIZE - 1)
     {
         printf("Stack Overflow\n");
+        return;
     }
     else
     {
@@ -22,6 +23,7 @@ int pop()
     if (top == -1)
     {
         printf("Stack underflow\n");
+        return -1;
     }
     else
     {

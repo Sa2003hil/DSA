@@ -21,6 +21,7 @@ int pop()
     if (top == -1)
     {
         printf("stack is full");
+        return -1;
     }
 
     int item = stack[top];
