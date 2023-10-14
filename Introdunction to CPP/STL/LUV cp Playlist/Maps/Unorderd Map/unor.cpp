@@ -57,6 +57,7 @@ int main()
     for(char it : inputString){
         if(isalnum(it)){
             
+            
         }
     }
 }
