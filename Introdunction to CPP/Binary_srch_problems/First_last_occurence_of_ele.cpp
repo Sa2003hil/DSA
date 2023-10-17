@@ -85,5 +85,5 @@ int main()
     cout << "First occurrence of " << key << " is: " << firstOccurrence << endl;
     cout << "Last occurrence of " << key << " is: " << lastOccurrence << endl;
 
-        return 0;
+    return 0;
 }
