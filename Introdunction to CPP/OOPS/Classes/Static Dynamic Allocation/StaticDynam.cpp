@@ -44,7 +44,14 @@ int main(int argc, char const *argv[])
 
     cout << "Roll no :" << h1.getId() << endl;
 
-    // Dynamic Allocation
+    /*
+
+    Syntax:
+
+    Dynamic Allocation:
+    ClassName *object = new ClassName();
+
+    */
 
     Hero *h2 = new Hero;
 

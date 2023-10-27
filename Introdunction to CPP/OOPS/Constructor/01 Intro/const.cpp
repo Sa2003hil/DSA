@@ -19,7 +19,7 @@ public:
 
     */
 
-    Hero() // making of  Default constructor
+    Hero() // making of  Default Constructor
     {
         cout << "This is constructor" << endl;
     }
