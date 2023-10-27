@@ -22,7 +22,7 @@ public:
 
     void setAge(int newAge)
     {
-        if (newAge >= 0)
+        if (newAge >= 8)
         {
             age = newAge;
         }
@@ -50,7 +50,7 @@ int main()
 
     // Accessing and setting private members using public member functions
     student1.setName("Sahil");
-    student1.setAge(20);
+    student1.setAge(8);
 
     // Accessing private members indirectly through public member functions
     cout << "Student's Name: " << student1.getName() << endl;
