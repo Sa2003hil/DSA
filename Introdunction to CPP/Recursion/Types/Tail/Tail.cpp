@@ -1,3 +1,5 @@
+//  Tail Recursion : When the recursive call is the last statement in the function then it is called tail recursion.
+
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -34,7 +34,7 @@ void colsum(int arr[][3], int row, int col)
 }
 
 // function for largest row sum
-largestrowsum(int arr[][3], int row, int col)
+int largestrowsum(int arr[][3], int row, int col)
 {
     int maxi = INT_MIN;
     int rowIndex = -1;

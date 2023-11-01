@@ -1,7 +1,9 @@
 /*
 Parameterised Constructor :
 
-This Keyword:-
+This Keyword:- this keyword is a pointer which points to the current object. It is used to refer to the current class object.
+
+NOTE:-
 
 */
 

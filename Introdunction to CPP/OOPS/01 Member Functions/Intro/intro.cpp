@@ -22,7 +22,7 @@ private:
     char level;
 
 public:
-    void print()
+    void print() // Member function
     {
         cout << "Health : " << health << endl;
         cout << "Level : " << level << endl;
