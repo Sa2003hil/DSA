@@ -57,42 +57,30 @@ using namespace std;
 #define maxin(arr, n) *max_element(arr, arr + n)
 
 //--------------------------------------------
-
-#include <bits/stdc++.h>
-using namespace std;
-
-void changeLetter(string &str)
+void RotateByD(int arr[], int k, int n)
 {
-  for (char &ch : str)
-  {
-    if (ch >= 'a' && ch <= 'z')
-    {
-      ch = ch - 32;
-    }
-    else if (ch >= 'A' && ch <= 'Z')
-    {
-      ch = ch + 32;
-    }
-  }
+  reverse(arr, arr + k);
+  reverse(arr + k, arr + n);
+  reverse(arr, arr + n);
 }
 
 int main()
 {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
   // Happy Coding :)
-  string str[100];
-  int n;
-  cin >> n;
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+
+  int n, k;
+  cin >> n >> k;
+
+  int arr[n];
+  cinarr(arr, n);
+
+  RotateByD(arr, k, n);
+
   for (int i = 0; i < n; i++)
   {
-    cin >> str[i];
-  }
-
-  for (int i = 0; i < 100; i++)
-  {
-    changeLetter(str[i]);
-    cout << str[i] << " ";
+    cout << arr[i] << " ";
   }
   cout << endl;
 
