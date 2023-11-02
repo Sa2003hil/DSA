@@ -57,32 +57,72 @@ using namespace std;
 #define maxin(arr, n) *max_element(arr, arr + n)
 
 //--------------------------------------------
-void RotateByD(int arr[], int k, int n)
+void reverse(int arr[], int start, int end)
 {
-  reverse(arr, arr + k);
-  reverse(arr + k, arr + n);
-  reverse(arr, arr + n);
+  while (start <= end)
+  {
+    int temp = arr[start];
+    arr[start] = arr[end];
+    arr[end] = temp;
+    start++;
+    end--;
+  }
 }
 
-int main()
+void printArr(int arr[], int n)
 {
-  // Happy Coding :)
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-
-  int n, k;
-  cin >> n >> k;
-
-  int arr[n];
-  cinarr(arr, n);
-
-  RotateByD(arr, k, n);
-
   for (int i = 0; i < n; i++)
   {
     cout << arr[i] << " ";
   }
   cout << endl;
+}
+
+void RightRotate(int arr[], int n, int d)
+{
+  reverse(arr, 0, n - d - 1);
+  reverse(arr, n - d, n - 1);
+  reverse(arr, 0, n - 1);
+}
+
+int LeftRotate(int arr[], int n, int d)
+{
+  reverse(arr, arr + d);
+  reverse(arr + d, arr + n);
+  reverse(arr, arr + n);
+}
+
+int main()
+{
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+  // Happy Coding :)
+  int n, d;
+  cin >> n >> d;
+
+  int arr[n];
+  cinarr(arr, n);
+
+  //  Enter 1 for Left Rotate Enter 2 for Right Rotate
+  int no;
+  cin >> no;
+
+  switch (no)
+  {
+  case 1:
+    LeftRotate(arr, n, d);
+    printArr(arr, n);
+    break;
+
+  case 2:
+    RightRotate(arr, n, d);
+    printArr(arr, n);
+    break;
+
+  default:
+    cout << "Invalid Choise" << endl;
+    break;
+  }
 
   return 0;
 }

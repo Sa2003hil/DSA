@@ -89,7 +89,7 @@ int main()
         cin >> str[i];
     }
 
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < n; i++)
     {
         changeLetter(str[i]);
         cout << str[i] << " ";
