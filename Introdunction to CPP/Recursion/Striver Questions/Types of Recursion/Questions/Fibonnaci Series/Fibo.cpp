@@ -50,4 +50,18 @@ Code:
     int slast = findfibo(n - 2);
     return last + slast;
 
+
+Method 2: Check if n is a fibonnaci or not
+
+bool isPerfectSquare(int n)
+{
+    int s = sqrt(n);
+    return s * s == n;
+}
+
+bool isFibonnaci(int n)
+{
+    return isPerfectSquare(5 * n * n + 4) || isPerfectSquare(5 * n * n - 4);
+}
+
 */
