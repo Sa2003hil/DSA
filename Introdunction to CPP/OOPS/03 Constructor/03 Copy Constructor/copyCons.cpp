@@ -1,75 +1,46 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-class Hero
+class Number
 {
-private:
-    int health;
+    int a;
 
 public:
-    char level;
-
-    // Simple Constructor
-    Hero()
+    Number()
     {
-        cout << "Constructor Called" << endl;
+        a = 0;
     }
-
-    // Parametrised Constructor
-    Hero(int health)
+    Number(int num)
     {
-        this->health = health;
+        a = num;
     }
-
-    Hero(int health, char level)
+    //  IMPORTANT!!---> When no copy constructor is found, compiler supplies its own copy constructor
+    Number(Number &obj)
     {
-        this->health = health;
-        this->level = level;
+        cout << "Copy constructor called!!!" << endl;
+        a = obj.a;
     }
-
-    // We can also create our own copy constructor
-    Hero(Hero &temp)
+    void display()
     {
-        cout << "Copy Constructor Called" << endl;
-        this->health = temp.health;
-        this->level = temp.level;
-    }
-
-    void print()
-    {
-        cout << "health - " << this->health << endl;
-        cout << "level - " << this->level << endl;
-    }
-
-    int getHealth()
-    {
-        return health;
-    }
-
-    char getLevel()
-    {
-        return level;
-    }
-
-    void setHealth(int h)
-    {
-        health = h;
-    }
-
-    void setLevel(char ch)
-    {
-        level = ch;
+        cout << "The number for this object is " << a << endl;
     }
 };
 
-int main()
+int main(int argc, char const *argv[])
 {
-    Hero Suresh(70, 'c');
-    Suresh.print();
+    /* code */
+    Number x, y, z(45), z2;
 
-    // This is the copy constructor
-    Hero Ritesh(Suresh);
-    Ritesh.print();
+    x.display();
+    y.display();
+    z.display();
 
+    Number z1(z); // Copy constructor invoked
+    z1.display();
+
+    z2 = z; // Copy constructor not invoked because humne pehle se hi z2 ko define kar rakha hai or hum yhan sirf value assign kar rahe hain
+
+    Number z3 = x; // Copy constructor invoked (This is not an assignment operator)
+    z3.display();
     return 0;
 }
