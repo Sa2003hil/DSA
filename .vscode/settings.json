@@ -3,6 +3,8 @@
         "*.ejs": "html",
         "iostream": "cpp",
         "ostream": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "sstream": "cpp",
+        "regex": "cpp"
     }
 }

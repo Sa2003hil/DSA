@@ -1,31 +1,57 @@
 #include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int main(int argc, char const *argv[])
+bool isVowel(char c)
 {
+    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
+        return true;
+    else
+        return false;
+}
 
-    string str;
-    cin >> str;
-
-    int maxCount = 0, currentCount = 0;
-
-    for (char ch : str)
+bool isContigous(string s)
+{
+    int l = s.length(), count = 0;
+    for (int i = 0; i < l - 1; i++)
     {
-        if (ch == '1')
+        if (isVowel(s[i]) && isVowel(s[i + 1]))
         {
-            currentCount++;
+            count++;
+            if (count == 3)
+            {
+                return true;
+            }
         }
         else
         {
-            maxCount = max(maxCount, currentCount);
-            currentCount = 0;
+            count = 0;
         }
     }
+    if (count != 3)
+    {
+        return false;
+    }
+}
 
-    // now case when string ends with 1(when all the string is of consecutive 1's)
-    maxCount = max(maxCount, currentCount);
+int main()
+{
+    int t, c = 0;
+    cin >> t;
+    while (t--)
+    {
+        string s;
+        cin >> s;
 
-    cout << maxCount << endl;
-    /* code */
+        if (isContigous(s))
+        {
+            cout << "Happy" << endl;
+        }
+        else
+        {
+            cout << "Sad" << endl;  what is tehe name 
+
+        }
+    }
     return 0;
 }
