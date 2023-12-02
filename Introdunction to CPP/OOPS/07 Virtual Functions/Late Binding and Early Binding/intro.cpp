@@ -40,7 +40,7 @@ int main(int argc, char const *argv[])
     A *baseptr;
     B derivedobj;
     baseptr = &derivedobj;
-    baseptr->display(); // this also gives ans : Base Class , because ptr is of base class and display() is also of base class to avoid this we'll add virtual keyword in front of base class this will make the display() of which object is pointed by ptr to be called.
+    baseptr->display(); // this : Derived Class , because ptr is of base class and display() is also of base class to avoid this we'll add virtual keyword in front of base class this will make the display() of which object is pointed by ptr to be called.
 
     return 0;
 }
