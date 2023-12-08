@@ -6,6 +6,9 @@
         "string": "cpp",
         "sstream": "cpp",
         "regex": "cpp",
-        "iterator": "cpp"
+        "iterator": "cpp",
+        "initializer_list": "cpp",
+        "valarray": "cpp",
+        "ratio": "cpp"
     }
 }
