@@ -350,23 +350,45 @@
 //     return 0;
 // }
 
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int main(int argc, char const *argv[])
+// {
+//     /* code */
+//     string str1, str2;
+
+//     cin >> str1;
+//     cin >> str2;
+
+//     int first = stoi(str1);
+//     int sec = stoi(str2);
+
+//     int result = first * sec;
+
+//     cout << result << endl;
+
+//     return 0;
+// }
+
 #include <bits/stdc++.h>
 using namespace std;
+
+int findFact(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    return n * findFact(n - 1);
+}
 
 int main(int argc, char const *argv[])
 {
     /* code */
-    string str1, str2;
-
-    cin >> str1;
-    cin >> str2;
-
-    int first = stoi(str1);
-    int sec = stoi(str2);
-
-    int result = first * sec;
-
+    int n;
+    cin >> n;
+    int result = findFact(n);
     cout << result << endl;
-
     return 0;
 }

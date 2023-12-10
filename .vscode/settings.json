@@ -9,6 +9,7 @@
         "iterator": "cpp",
         "initializer_list": "cpp",
         "valarray": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "vector": "cpp"
     }
 }

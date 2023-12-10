@@ -1,8 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <unordered_map>
-#include <algorithm>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 class Solution
@@ -10,7 +6,7 @@ class Solution
 public:
     vector<vector<string>> groupAnagrams(vector<string> &strs)
     {
-        // create an unordered map for storing sorted string part
+        // create an unordered map for sorted string part
         unordered_map<string, vector<string>> mp;
 
         for (auto x : strs)

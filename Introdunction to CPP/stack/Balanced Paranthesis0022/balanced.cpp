@@ -14,7 +14,7 @@ string isBalanced(string str)
     stack<char> st;
     for (char bracket : str)
     {
-        // agr symbols[bracket < 0] means ye opening type of bracket hai
+        // agr symbols[bracket]<0 means ye opening type of bracket hai
         if (symbols[bracket] < 0)
         {
             st.push(bracket);
