@@ -1,27 +1,37 @@
 #include <iostream>
 using namespace std;
-// using single pointer
-bool isPallindrome(int i, string &str)
+
+// Using a single pointer with recursion
+bool isPalindrome(int i, string &str)
 {
     int n = str.length() - 1;
+
+    // Base case: if the pointer reaches the middle of the string
     if (i >= n / 2)
         return true;
-    if (str[i] != str[n - i - 1])
+
+    // Check if the characters at the current positions are equal
+    if (str[i] != str[n - i])
         return false;
 
-    isPallindrome(i + 1, str);
+    // Move to the next pair of characters
+    return isPalindrome(i + 1, str);
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
     string str;
+    cout << "Enter a string: ";
     cin >> str;
 
-    cout << isPallindrome(str, 0);
+    // Check if the string is a palindrome
+    if (isPalindrome(0, str))
+        cout << "The string is a palindrome." << endl;
+    else
+        cout << "The string is not a palindrome." << endl;
+
     return 0;
 }
-
-
 
 /*
 Using Functional Recursion

@@ -371,24 +371,87 @@
 //     return 0;
 // }
 
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int findFact(int n)
+// {
+//     if (n == 0 || n == 1)
+//     {
+//         return 1;
+//     }
+//     return n * findFact(n - 1);
+// }
+
+// int main(int argc, char const *argv[])
+// {
+//     /* code */
+//     int n;
+//     cin >> n;
+//     int result = findFact(n);
+//     cout << result << endl;
+//     return 0;
+// }
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int main()
+// {
+//     /* code */
+//     int n = 4;
+//     int arr[n] = {1, 2, 3, 4};
+//     int arr2[n];
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         // cout << arr[i] << " " << endl;
+//         cout << arr[i] << " ";
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         arr2[i] = arr[i];
+//     }
+//     for (int i = 0; i < n; i++)
+//     {
+//         // cout << arr[i] << " " << endl;
+//         cout << arr2[i] << " ";
+//     }
+//     cout << endl;
+//     return 0;
+// }
+
 #include <bits/stdc++.h>
 using namespace std;
 
-int findFact(int n)
-{
-    if (n == 0 || n == 1)
-    {
-        return 1;
-    }
-    return n * findFact(n - 1);
-}
+#define MAX 100
 
 int main(int argc, char const *argv[])
 {
     /* code */
-    int n;
-    cin >> n;
-    int result = findFact(n);
-    cout << result << endl;
+    int arr[MAX][MAX];
+    int row = 3;
+    int col = 3;
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            cin >> arr[i][j];
+        }
+    }
+
+    int diagonalSum = 0, diagonalSum2 = 0;
+
+    for (int i = 0; i < row && i < col; ++i)
+    {
+        diagonalSum += arr[i][i];
+    }
+
+    for (int i = 0, j = col - 1; i < row && j >= 0; i++, j--)
+    {
+        diagonalSum2 += arr[i][j];
+    }
+    cout << "Diagonal sum is: " << diagonalSum << endl;
+    cout << "Diagonal sum is: " << diagonalSum2 << endl;
     return 0;
 }

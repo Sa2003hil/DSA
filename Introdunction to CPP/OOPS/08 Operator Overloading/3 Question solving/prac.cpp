@@ -170,7 +170,7 @@ using namespace std;
 class Solution
 {
 public:
-    int lengthOfLongestSubstring(std::string s)
+    int lengthOfLongestSubstring(string s)
     {
         int n = s.length();
         int maxLength = 0;
@@ -213,7 +213,7 @@ public:
                     charSet.erase(s[left]);
                     left++;
                 }
-                        }
+            }
         }
         return maxLength;
     }
