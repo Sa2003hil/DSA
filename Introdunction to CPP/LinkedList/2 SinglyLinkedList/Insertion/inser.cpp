@@ -26,6 +26,13 @@ void insertAtBeginning(Node *&head, int data)
 }
 
 // function to insert a node at the tail of the linked list
+void insertAtTail(Node *&tail, int data)
+{
+    // create a new node
+    Node *temp = new Node(data);
+    tail->next = temp;
+    tail = temp;
+}
 
 // how to traverse a linked list
 void printLinkedList(Node *&head)
@@ -42,12 +49,18 @@ void printLinkedList(Node *&head)
 
 int main(int argc, char const *argv[])
 {
-    /* code */
-    Node *head = NULL;
-    insertAtBeginning(head, 10);
+    Node *node1 = new Node(1);
+
+    Node *head = node1;
+    Node *tail = node1;
+    printLinkedList(head);
+
+    // insertAtBeginning(head, 12);
+    insertAtTail(tail, 12);
 
     printLinkedList(head);
-    insertAtBeginning(head, 12);
+
+    insertAtTail(tail, 15);
 
     printLinkedList(head);
 
