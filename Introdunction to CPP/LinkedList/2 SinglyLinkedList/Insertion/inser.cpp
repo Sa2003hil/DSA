@@ -6,7 +6,7 @@ class Node
 {
 public:
     int data;
-    Node *next;
+    Node *next; // ptr to the next node
 
     // constructor to create a new node
     Node(int data)
@@ -24,6 +24,8 @@ void insertAtBeginning(Node *&head, int data)
     temp->next = head;
     head = temp;
 }
+
+// function to insert a node at the tail of the linked list
 
 // how to traverse a linked list
 void printLinkedList(Node *&head)

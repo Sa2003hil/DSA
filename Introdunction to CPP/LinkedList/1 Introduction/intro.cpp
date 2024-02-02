@@ -12,7 +12,7 @@ example : arr[10] ---> can we change the size of the array like 100 in runtime ?
 In case of vectors we can do that but it is not efficient.
 
 So to overcome this problem we use linked list.It is the dynamic data structure which can grow and shrink during runtime, means no memory is wasted
-
+ 
 
 * Insertion/Deleteion requires no shifting of elements, only the adjustment of the pointer. unlike arrays where shifting is required.
 
