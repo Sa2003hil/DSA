@@ -40,6 +40,31 @@ Node *removeHead(Node *head)
     return head;       // Return the new head
 }
 
+// Deletion of Tail
+Node *removeTail(Node *head)
+{
+    // edge case if the list is empty or has only one node
+    if (head == NULL || head->next == NULL)
+    {
+        return NULL;
+    }
+
+    Node *temp = head;
+    // traverse upto second last element
+    while (temp->next->next != NULL)
+    {
+        temp = temp->next;
+    }
+
+    // delete the last node
+    delete temp->next;
+
+    // make the second last node as the last node
+    temp->next = NULL;
+
+    return head;
+}
+
 // print the linked list
 void printLinkedList(Node *head)
 {
@@ -59,6 +84,9 @@ int main(int argc, char const *argv[])
     Node *head = convertArr2LL(arr);
 
     head = removeHead(head);
+    printLinkedList(head);
+
+    head = removeTail(head);
     printLinkedList(head);
 
     return 0;

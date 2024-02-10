@@ -10,6 +10,7 @@
         "initializer_list": "cpp",
         "valarray": "cpp",
         "ratio": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "new": "cpp"
     }
 }
