@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-inptarr(int arr[], int n)
+int inptarr(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
     {
@@ -12,9 +12,10 @@ inptarr(int arr[], int n)
     }
 }
 
-selectionsort(int arr[], int n)
+// Select minimum and swap
+int selectionsort(int arr[], int n)
 {
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 0; i < n - 2; i++)
     {
         int minindex = i;
 

@@ -4,6 +4,9 @@ Time complexity of O(N2) || space complexity ---> O(1), because it doesn't requi
 Worst case-->O(N2), Total number of swaps = Total number of comparison
 
 
+In-Place Sort :  The term "in-place" indicates that the sorting algorithm operates within the same memory space as the original data, typically by swapping or moving elements within the array or list.
+
+
 */
 
 #include <bits/stdc++.h>
