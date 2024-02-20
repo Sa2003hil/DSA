@@ -51,7 +51,7 @@ using namespace std;
 #define cntsetbits(x, cntx)    \
     while (x != 0)             \
         \ 
-                        \
+                                                                \
         {                      \
             x = (x & (x - 1)); \
             cntx++;            \

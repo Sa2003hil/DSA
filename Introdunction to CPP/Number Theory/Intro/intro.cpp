@@ -49,10 +49,10 @@ int main(int argc, char const *argv[])
 
     //  Now set the bth bit
     int a = 9, b = 1;
-
     printBinnary(a | (1 << b));
 
     // Now unset the bth bit
+    printBinnary(a & ~(1 << b));
 
     return 0;
 }
