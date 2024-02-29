@@ -37,6 +37,7 @@ void insertAtTail(Node *&tail, int data)
 // how to traverse a linked list
 void printLinkedList(Node *&head)
 {
+    // never move the head because we will lose the reference to the linked list
     Node *temp = head;
 
     while (temp != NULL)
