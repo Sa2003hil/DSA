@@ -54,6 +54,10 @@ void insertAtHead(Node *&head, int data)
 
 void insertAtTail(Node *&tail, int data)
 {
+    Node *temp = new Node(data);
+    tail->next = temp;
+    temp->prev = tail;
+    tail = temp;
 }
 
 int main(int argc, char const *argv[])
@@ -61,11 +65,19 @@ int main(int argc, char const *argv[])
     /* code */
     Node *node1 = new Node(10);
     Node *head = node1;
+    Node *tail = node1;
 
     // print(head);
 
     insertAtHead(head, 11);
     print(head);
+
+    insertAtHead(head, 12);
+    print(head);
+
+    insertAtTail(tail, 13);
+    print(head);
+
     cout << getLength(head) << endl;
     return 0;
 }
