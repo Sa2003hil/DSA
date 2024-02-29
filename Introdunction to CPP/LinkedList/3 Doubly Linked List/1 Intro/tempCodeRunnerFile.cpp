@@ -1,2 +1,1 @@
-insertAtHead(head, 11);
-    print(hea
+ives length of Linked 
