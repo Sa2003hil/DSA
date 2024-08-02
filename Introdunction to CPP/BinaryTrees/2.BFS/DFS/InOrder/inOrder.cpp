@@ -37,6 +37,7 @@ node *buildTree(node *root)
 }
 
 void inOrder(node *root)
+//  direction of tarversal is
 // L N R
 {
     if (root == NULL)
@@ -51,6 +52,8 @@ void inOrder(node *root)
 
 void preOrder(node *root)
 {
+    //  direction of traversal is
+    // N L R
     if (root == NULL)
     {
         return;
@@ -63,6 +66,8 @@ void preOrder(node *root)
 
 void postOrder(node *root)
 {
+    // direction of traversal is
+    // L R N
     if (root == NULL)
     {
         return;

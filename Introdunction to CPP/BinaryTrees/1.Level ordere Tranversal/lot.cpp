@@ -51,6 +51,7 @@ void levelOrderTraversal(node *root)
 
         if (temp == NULL)
         {
+            cout << endl;
             // porana level complete ho chuka hai
             if (!q.empty())
             {
